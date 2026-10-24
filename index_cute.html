@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport agar tampilan menyesuaikan layar HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tambahan dekorasi cute pastel: hanya mempercantik tampilan, tidak mengubah konten/fungsi asli -->
+  <style>
+    :root {
+      --cute-pink: #f4a9c5;
+      --cute-lilac: #c9b8ef;
+      --cute-cream: #fff8f1;
+      --cute-ink: #66566d;
+    }
+
+    body {
+      position: relative;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 8% 12%, rgba(244,169,197,.18) 0 5px, transparent 6px),
+        radial-gradient(circle at 92% 28%, rgba(201,184,239,.2) 0 7px, transparent 8px);
+    }
+
+    body::before,
+    body::after {
+      position: fixed;
+      z-index: 0;
+      pointer-events: none;
+      color: var(--cute-pink);
+      opacity: .55;
+      font-size: 25px;
+      animation: cute-float 4s ease-in-out infinite;
+    }
+
+    body::before {
+      content: "✧ ୨୧";
+      top: 18%;
+      left: 3%;
+    }
+
+    body::after {
+      content: "♡ ✦";
+      right: 3%;
+      bottom: 15%;
+      color: var(--cute-lilac);
+      animation-delay: 1.2s;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      display: inline-block;
+      position: relative;
+    }
+
+    header h1::after {
+      content: " ♡";
+      color: var(--cute-pink);
+      font-size: .75em;
+    }
+
+    .profil {
+      position: relative;
+      border: 2px solid rgba(244,169,197,.35);
+      border-radius: 26px;
+      box-shadow: 0 12px 30px rgba(126, 91, 125, .10);
+    }
+
+    .profil::before {
+      content: "✿ hello there! ✿";
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: var(--cute-cream);
+      color: var(--cute-ink);
+      font-size: 12px;
+      letter-spacing: .5px;
+    }
+
+    .profil img {
+      border: 5px solid #fff;
+      box-shadow: 0 5px 18px rgba(244,169,197,.28);
+    }
+
+    .judul-bagian::after {
+      content: " ✧";
+      color: var(--cute-pink);
+    }
+
+    .kartu {
+      position: relative;
+      border: 1px solid rgba(201,184,239,.35);
+      border-radius: 20px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .kartu::after {
+      content: "♡";
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      color: var(--cute-pink);
+      opacity: .8;
+      font-size: 18px;
+    }
+
+    .kartu:hover {
+      transform: translateY(-6px) rotate(-1deg);
+      box-shadow: 0 12px 24px rgba(126, 91, 125, .13);
+    }
+
+    .tombol-area button {
+      border-radius: 999px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .tombol-area button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(244,169,197,.25);
+    }
+
+    footer p::before {
+      content: "♡ ";
+      color: var(--cute-pink);
+    }
+
+    @keyframes cute-float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(8deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body::before, body::after { animation: none; }
+      .kartu, .tombol-area button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Profile </h1>
+  </header>
+
+  <main class="container">
+
+    <!-- Bagian profil -->
+    <section class="profil">
+      <img src="download (4).jpg" alt="Ilustrasi foto profil">
+      <h2>Alexa Aprilia N.H</h2>
+      <p id="deskripsi">
+        Hello! Aku Alexa, aku Mahasiswa Semester 1 Prodi Teknik Informatika, 
+        dan aku sedang belajar membuat sebuah website. Saya senang mencoba hal baru, terutama di bidang teknologi.
+      </p>
+
+      <div class="tombol-area">
+        <button id="tombolTeks">Change text</button>
+        <button id="tombolTema">Switch theme</button>
+      </div>
+    </section>
+
+    <!-- Bagian hobi dan keterampilan -->
+    <section>
+      <h2 class="judul-bagian">Hobbies &amp; Skills</h2>
+
+      <div class="daftar-kartu">
+        <div class="kartu">
+          <h3>Sport</h3>
+          <p>Aku suka bermain volly, Badminton, Basket. Namun saya lebih suka bermain Volly disaat waktu luang.</p>
+        </div>
+
+        <div class="kartu">
+          <h3>Baking</h3>
+          <p>aku suka membuat Roti Sisir , Cookies, apalagi Salt Bread. Dan saya selalu berbagi kepada semua orang terdekat. </p>
+        </div>
+
+        <div class="kartu">
+          <h3>Crochet</h3>
+          <p>Aku suka membuat karya seperti Bando, Tas, maupun bentuk mainan, dan itu sangat menyenangkan</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Alexa Aprilia N.H</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport agar tampilan menyesuaikan layar HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<div class="pet-companion" onclick="petMe()">
+  <span id="petEmoji">🐱</span>
+  <div class="pet-bubble" id="petBubble">
+    Haiii! ♡
+  </div>
+</div>
+<body>
+  <header>
+    <h1>My Profile </h1>
+  </header>
+<section class="secret-section">
+  <h2 class="judul-bagian">A Little Secret ♡</h2>
+
+  <div class="envelope" onclick="bukaSurat()">
+    💌
+    <p>Click to open me!</p>
+  </div>
+
+  <div id="surat">
+    <h3>Hallo Semua! ♡</h3>
+    <p>
+      Terimakasii Sudah Berkunjung ke Website ku!
+      Tetap Senyum dan Happy. 🌷
+    </p>
+    <span>With love, Alexa ♡</span>
+  </div>
+</section>
+  <main class="container">
+
+    <!-- Bagian profil -->
+    <section class="profil">
+      <img src="download (4).jpg" alt="Ilustrasi foto profil">
+      <h2>Alexa Aprilia N.H</h2>
+      <p id="deskripsi">
+        Hello! Aku Alexa, aku Mahasiswa Semester 1 Prodi Teknik Informatika, 
+        dan aku sedang belajar membuat sebuah website. Saya senang mencoba hal baru, terutama di bidang teknologi.
+      </p>
+
+      <div class="tombol-area">
+  <button id="tombolTeks">Change text</button>
+  <button id="tombolTema">Switch theme</button>
+  <button onclick="pesanRandom()">Cute message ♡</button>
+</div>
+
+<p id="pesanCute">
+  Hello! Have a lovely day ♡
+</p>
+    </section>
+
+    <!-- Bagian hobi dan keterampilan -->
+    <section>
+      <h2 class="judul-bagian">Hobbies &amp; Skills</h2>
+
+      <div class="daftar-kartu">
+        <div class="kartu">
+          <h3>Sport</h3>
+          <p>Aku suka bermain volly, Badminton, Basket. Namun saya lebih suka bermain Volly disaat waktu luang.</p>
+        </div>
+
+        <div class="kartu">
+          <h3>Baking</h3>
+          <p>aku suka membuat Roti Sisir , Cookies, apalagi Salt Bread. Dan saya selalu berbagi kepada semua orang terdekat. </p>
+        </div>
+
+        <div class="kartu">
+          <h3>Crochet</h3>
+          <p>Aku suka membuat karya seperti Bando, Tas, maupun bentuk mainan, dan itu sangat menyenangkan</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Alexa Aprilia N.H</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

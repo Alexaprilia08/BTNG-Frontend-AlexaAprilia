@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.7;
+  background-color: #30206e;
+  color: #281f5a;
+}
+
+header {
+  background: linear-gradient(90deg, #2c235a, #141414);
+  color: rgb(131, 149, 208);
+  text-align: center;
+  padding: 25px;
+  border-radius: 0 0 40px 40px;
+}
+
+header h1 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.profil {
+  background-color: rgb(118, 121, 187);
+  border: 3px dashed #282158;
+  border-radius: 30px;
+  padding: 30px 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profil img {
+  max-width: 100%;
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #211357;
+  margin-bottom: 15px;
+}
+
+.profil h2 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: #282367;
+  margin-bottom: 10px;
+}
+
+.tombol-area {
+  margin-top: 20px;
+}
+
+button {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: #211355;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 26px;
+  margin: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #443b8b;
+}
+
+button:hover {
+  background-color: #c9b3ff;
+  box-shadow: 0 5px 0 #a58de0;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #21236a;
+}
+
+.judul-bagian {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: #f9f9fa;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.daftar-kartu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.kartu {
+  background-color: white;
+  border: 2px solid #ffd6e7;
+  border-radius: 25px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 158, 196, 0.25);
+}
+
+.kartu:hover {
+  transform: translateY(-6px);
+  border-color: #29245e;
+}
+
+.kartu h3 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #2a2d6d;
+  margin-bottom: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #f7f7fb;
+}
+
+@media (min-width: 768px) {
+  .daftar-kartu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+body.gelap {
+  background-color: #3c1d4f;
+  color: #f5e6f1;
+}
+
+body.gelap header {
+  background: linear-gradient(90deg, #55347a, #201e5f);
+}
+
+body.gelap .profil,
+body.gelap .kartu {
+  background-color: #443171;
+  border-color: #351e57;
+}
+
+body.gelap .profil h2,
+body.gelap .judul-bagian {
+  color: #ab5fcb;
+}
+
+body.gelap .kartu h3 {
+  color: #d9c8ff;
+}
+
+body.gelap footer {
+  color: #b9a5cf;
+}
+
+/* ===== EXTRA CUTE DECORATIONS ===== */
+
+:root {
+  --cute-pink: #f4a9c5;
+  --cute-lilac: #c9b8ef;
+  --cute-cream: #fff8f1;
+}
+
+/* Floating decorations */
+.cute-float {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  animation: floatCute 4s ease-in-out infinite;
+  opacity: .7;
+}
+
+@keyframes floatCute {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-15px) rotate(15deg);
+  }
+}
+
+/* Sparkle */
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  color: var(--cute-pink);
+  font-size: 16px;
+  animation: sparkleOut .8s ease forwards;
+}
+
+@keyframes sparkleOut {
+  0% {
+    opacity: 1;
+    transform: scale(.5) rotate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8) rotate(90deg);
+  }
+}
+
+/* Profile image */
+.profil img {
+  transition: transform .4s ease,
+              box-shadow .4s ease;
+}
+
+.profil img:hover {
+  transform: rotate(-5deg) scale(1.06);
+  box-shadow: 0 10px 25px rgba(244,169,197,.4);
+}
+
+/* Cute cards */
+.kartu {
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+.kartu:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Little sticker */
+.kartu h3::before {
+  content: "✿ ";
+  color: var(--cute-pink);
+}
+
+/* Buttons */
+.tombol-area button {
+  position: relative;
+  overflow: hidden;
+}
+
+.tombol-area button:active {
+  transform: scale(.93);
+}
+
+/* Cute message */
+#pesanCute {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 15px;
+  background: var(--cute-cream);
+  color: #66566d;
+  animation: muncul .4s ease;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating heart */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  z-index: 4;
+  color: var(--cute-pink);
+  animation: heartUp 5s linear forwards;
+}
+
+@keyframes heartUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Reduce animation for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cute-float,
+  .heart,
+  .sparkle {
+    animation: none;
+  }
+}
+.secret-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.envelope {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 65px;
+  padding: 20px;
+  transition: .3s;
+}
+
+.envelope:hover {
+  transform: scale(1.2) rotate(8deg);
+}
+
+.envelope p {
+  font-size: 13px;
+}
+
+#surat {
+  display: none;
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: #fff0f6;
+  color: #66566d;
+  animation: suratMuncul .7s ease;
+}
+
+#surat.aktif {
+  display: block;
+}
+
+@keyframes suratMuncul {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.pet-companion {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  text-align: center;
+  animation: petBounce 2s infinite;
+}
+
+#petEmoji {
+  font-size: 48px;
+  filter: drop-shadow(0 5px 5px #e8b4ca);
+}
+
+.pet-bubble {
+  background: white;
+  color: #aa7596;
+  padding: 8px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px #e8c9dc;
+}
+
+@keyframes petBounce {
+  50% { transform: translateY(-8px); }
+}
+
+/* ===== SCROLL REVEAL ===== */
+
+.reveal {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(35px);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.2,.8,.2,1),
+    filter .9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Kartu muncul bergantian */
+.kartu:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.kartu:nth-child(2) {
+  transition-delay: .25s;
+}
+
+.kartu:nth-child(3) {
+  transition-delay: .4s;
+}
